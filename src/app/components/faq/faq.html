@@ -1,0 +1,73 @@
+<section class="w-full py-32">
+  <div class="max-w-3xl mx-auto px-8">
+
+    <div class="text-center mb-16">
+      <span class="text-xs font-medium tracking-widest text-primary-subtle uppercase">Resuelve tus dudas</span>
+      <h2 class="text-5xl font-bold tracking-tight text-primary-hover mt-4">Preguntas frecuentes</h2>
+    </div>
+
+    <div class="flex flex-col gap-3">
+
+      <div class="rounded-2xl bg-(--card-bg) ring-1 ring-(--card-ring) overflow-hidden">
+        <button (click)="toggleFaq(0)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer">
+          <span class="text-sm font-medium text-primary-hover">¿Cuánto cuesta un proyecto?</span>
+          <span class="text-primary-subtle text-lg transition-transform duration-300" [class.rotate-45]="openFaq() === 0">+</span>
+        </button>
+        @if (openFaq() === 0) {
+          <div class="px-6 pb-5">
+            <p class="text-sm text-primary leading-relaxed">Cada proyecto es único, por eso no manejamos precios fijos. Después de una llamada inicial de descubrimiento, te enviamos una propuesta detallada con alcance, tiempos y costos. Sin compromisos.</p>
+          </div>
+        }
+      </div>
+
+      <div class="rounded-2xl bg-(--card-bg) ring-1 ring-(--card-ring) overflow-hidden">
+        <button (click)="toggleFaq(1)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer">
+          <span class="text-sm font-medium text-primary-hover">¿Cuánto tiempo toma desarrollar un proyecto?</span>
+          <span class="text-primary-subtle text-lg transition-transform duration-300" [class.rotate-45]="openFaq() === 1">+</span>
+        </button>
+        @if (openFaq() === 1) {
+          <div class="px-6 pb-5">
+            <p class="text-sm text-primary leading-relaxed">Depende de la complejidad. Un sitio web puede estar listo en 2-4 semanas, mientras que una aplicación completa puede tomar de 2 a 4 meses. Siempre definimos un timeline claro antes de empezar.</p>
+          </div>
+        }
+      </div>
+
+      <div class="rounded-2xl bg-(--card-bg) ring-1 ring-(--card-ring) overflow-hidden">
+        <button (click)="toggleFaq(2)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer">
+          <span class="text-sm font-medium text-primary-hover">¿Cómo es el proceso de trabajo?</span>
+          <span class="text-primary-subtle text-lg transition-transform duration-300" [class.rotate-45]="openFaq() === 2">+</span>
+        </button>
+        @if (openFaq() === 2) {
+          <div class="px-6 pb-5">
+            <p class="text-sm text-primary leading-relaxed">Seguimos cuatro fases: Descubrimiento (entendemos tu negocio), Diseño (prototipos y validación), Desarrollo (construcción iterativa con entregas semanales) y Lanzamiento (deploy, testing y soporte).</p>
+          </div>
+        }
+      </div>
+
+      <div class="rounded-2xl bg-(--card-bg) ring-1 ring-(--card-ring) overflow-hidden">
+        <button (click)="toggleFaq(3)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer">
+          <span class="text-sm font-medium text-primary-hover">¿Ofrecen soporte después del lanzamiento?</span>
+          <span class="text-primary-subtle text-lg transition-transform duration-300" [class.rotate-45]="openFaq() === 3">+</span>
+        </button>
+        @if (openFaq() === 3) {
+          <div class="px-6 pb-5">
+            <p class="text-sm text-primary leading-relaxed">Sí. Todos nuestros proyectos incluyen 30 días de soporte post-lanzamiento. También ofrecemos planes de mantenimiento mensual para actualizaciones, mejoras y monitoreo continuo.</p>
+          </div>
+        }
+      </div>
+
+      <div class="rounded-2xl bg-(--card-bg) ring-1 ring-(--card-ring) overflow-hidden">
+        <button (click)="toggleFaq(4)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer">
+          <span class="text-sm font-medium text-primary-hover">¿Trabajan con clientes internacionales?</span>
+          <span class="text-primary-subtle text-lg transition-transform duration-300" [class.rotate-45]="openFaq() === 4">+</span>
+        </button>
+        @if (openFaq() === 4) {
+          <div class="px-6 pb-5">
+            <p class="text-sm text-primary leading-relaxed">Por supuesto. Nuestro equipo trabaja 100% remoto y hemos colaborado con empresas en Latinoamérica, Estados Unidos y Europa. Nos adaptamos a tu zona horaria.</p>
+          </div>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>
