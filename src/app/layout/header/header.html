@@ -4,15 +4,15 @@
   <div class="absolute top-1/2 left-[25%] -translate-x-1/2 -translate-y-1/2 w-125 h-125 rounded-full bg-primary-hover/4 blur-[120px] pointer-events-none"></div>
 
   <!-- Nav -->
-  <div class="w-full px-8 h-16 flex items-center justify-between">
+  <div class="w-full px-4 sm:px-8 h-16 flex items-center justify-between">
     <div class="flex items-center ">
       <img src="path/to/logo.svg" alt="Logo DevStudio" />
-      <a href="#" class="text-sm font-bold tracking-tight text-primary-hover"
+      <a href="#" class="text-xs sm:text-sm font-bold tracking-tight text-primary-hover"
         >dev<span class="font-light">studio</span></a
       >
     </div>
 
-    <nav class="flex items-center gap-8">
+    <nav class="hidden md:flex items-center gap-4 lg:gap-8">
       <a href="#" class="text-sm text-primary hover:text-primary-hover transition-colors duration-200"
         >Inicio</a
       >
@@ -35,21 +35,26 @@
         >Contacto</a
       >
     </nav>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden w-9 h-9 rounded-full ring-1 ring-(--card-ring) flex items-center justify-center text-primary-subtle hover:text-primary-hover">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+    </button>
   </div>
 
   <!-- Hero -->
-  <div class="w-full h-auto flex justify-between">
-    <div class="w-3/6 mx-auto px-8 py-28 flex flex-col items-start gap-5">
+  <div class="w-full h-auto flex flex-col lg:flex-row justify-between">
+    <div class="w-full lg:w-1/2 mx-auto px-4 sm:px-8 py-12 sm:py-20 lg:py-28 flex flex-col items-start gap-5">
       <span class="text-xs font-medium tracking-widest text-primary-subtle uppercase"
         >Estudio de Desarrollo</span
       >
-      <h1 class="text-6xl font-bold tracking-tight text-primary-hover leading-[1.1]">
+      <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-primary-hover leading-[1.1]">
         Creamos productos<br />digitales que importan
       </h1>
-      <p class="text-base text-primary max-w-lg leading-relaxed">
+      <p class="text-sm sm:text-base text-primary max-w-lg leading-relaxed">
         Código limpio, diseño cuidadoso y soluciones escalables para negocios modernos.
       </p>
-      <div class="flex items-center gap-4 mt-2">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2">
         <a
           href="#"
           class="text-sm bg-primary-hover text-secondary px-6 py-3 rounded-full hover:opacity-80 transition-opacity duration-200"
@@ -62,7 +67,7 @@
         >
       </div>
     </div>
-    <div class="w-3/6 mx-auto px-8 py-20 flex items-center justify-center">
+    <div class="w-full lg:w-1/2 mx-auto px-4 sm:px-8 py-12 sm:py-20 flex items-center justify-center">
       <!-- Contenedor con animación flotante -->
       <div class="relative w-full max-w-lg animate-[float_6s_ease-in-out_infinite]">
         
@@ -73,8 +78,8 @@
             <div class="absolute -inset-2 -z-10 rounded-3xl bg-primary-hover/6 blur-2xl animate-[soft-pulse_5s_ease-in-out_infinite]"></div>
 
             <!-- Texto principal -->
-            <h3 class="text-primary-hover text-2xl font-bold mb-3">Tu idea, nuestra solución</h3>
-            <p class="text-primary text-sm leading-relaxed mb-8">Convertimos visiones en experiencias digitales únicas. Cada proyecto es una pieza pensada a medida para tu negocio.</p>
+            <h3 class="text-primary-hover text-lg sm:text-2xl font-bold mb-3">Tu idea, nuestra solución</h3>
+            <p class="text-primary text-xs sm:text-sm leading-relaxed mb-8">Convertimos visiones en experiencias digitales únicas. Cada proyecto es una pieza pensada a medida para tu negocio.</p>
 
             <!-- Barra de progreso animada -->
             <div class="mb-8">
@@ -88,27 +93,27 @@
             </div>
 
             <!-- Métricas en fila -->
-            <div class="grid grid-cols-3 gap-4 mb-8">
-              <div class="text-center p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
-                <p class="text-primary-hover text-2xl font-bold">120+</p>
-                <p class="text-primary-subtle text-[10px] uppercase tracking-wider mt-1">Proyectos</p>
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-8">
+              <div class="text-center p-2 sm:p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
+                <p class="text-primary-hover text-xl sm:text-2xl font-bold">120+</p>
+                <p class="text-primary-subtle text-[8px] sm:text-[10px] uppercase tracking-wider mt-1">Proyectos</p>
               </div>
-              <div class="text-center p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
-                <p class="text-primary-hover text-2xl font-bold">98%</p>
-                <p class="text-primary-subtle text-[10px] uppercase tracking-wider mt-1">Satisfacción</p>
+              <div class="text-center p-2 sm:p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
+                <p class="text-primary-hover text-xl sm:text-2xl font-bold">98%</p>
+                <p class="text-primary-subtle text-[8px] sm:text-[10px] uppercase tracking-wider mt-1">Satisfacción</p>
               </div>
-              <div class="text-center p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
-                <p class="text-primary-hover text-2xl font-bold">30d</p>
-                <p class="text-primary-subtle text-[10px] uppercase tracking-wider mt-1">Entrega</p>
+              <div class="text-center p-2 sm:p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
+                <p class="text-primary-hover text-xl sm:text-2xl font-bold">30d</p>
+                <p class="text-primary-subtle text-[8px] sm:text-[10px] uppercase tracking-wider mt-1">Entrega</p>
               </div>
             </div>
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Estrategia</span>
-              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Diseño</span>
-              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Desarrollo</span>
-              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Lanzamiento</span>
+              <span class="text-[11px] sm:text-xs px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Estrategia</span>
+              <span class="text-[11px] sm:text-xs px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Diseño</span>
+              <span class="text-[11px] sm:text-xs px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Desarrollo</span>
+              <span class="text-[11px] sm:text-xs px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Lanzamiento</span>
             </div>
 
         </div>
