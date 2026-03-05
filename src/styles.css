@@ -18,6 +18,32 @@
     50% { background-position: 100% 50%; }
 }
 
+/* Pulso suave monocromático */
+@keyframes soft-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Resplandor orbital */
+@keyframes orbit-glow {
+    0% { box-shadow: 0 0 20px rgba(170, 170, 170, 0.05); }
+    33% { box-shadow: 0 0 30px rgba(187, 187, 187, 0.1); }
+    66% { box-shadow: 0 0 25px rgba(204, 204, 204, 0.08); }
+    100% { box-shadow: 0 0 20px rgba(170, 170, 170, 0.05); }
+}
+
+/* Flotación sutil */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+/* Línea de brillo que recorre */
+@keyframes shine-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
 
 /* Rubik Font Family */
 @font-face {
