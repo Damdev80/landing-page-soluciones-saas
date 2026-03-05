@@ -4,7 +4,6 @@ import { Component, signal } from '@angular/core';
   selector: 'app-faq',
   imports: [],
   templateUrl: './faq.html',
-  styles: ``,
 })
 export class Faq {
   openFaq = signal<number | null>(null);

@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-equipo',
   imports: [],
   templateUrl: './equipo.html',
-  styles: ``,
 })
 export class Equipo {}

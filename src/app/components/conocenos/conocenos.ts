@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-conocenos',
   imports: [],
   templateUrl: './conocenos.html',
-  styles: ``,
 })
 export class Conocenos {}
