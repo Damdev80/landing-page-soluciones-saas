@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ThemeService } from '../../core/theme';
+import { ThemeService } from '../../shared/service/theme';
 
 @Component({
   selector: 'app-header',
@@ -13,4 +13,4 @@ export class Header {
   toggleTheme() {
     this.theme.toggle();
   }
-}
+} 
