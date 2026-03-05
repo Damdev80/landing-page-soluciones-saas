@@ -4,7 +4,10 @@
 
 
 @theme {
-    --color-primary: #000;
-    --color-secondary: #fff;
-    --text-color: #333;
+    --color-primary: #aaa;
+    --color-primary-hover: #fff;
+    --color-primary-tile: #bbb;
+    --color-primary-subtle: #ccc;
+    --color-secondary: #000;
+    --text-color: #ccc;
 }
