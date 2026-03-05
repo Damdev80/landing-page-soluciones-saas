@@ -147,7 +147,7 @@
     src: url('./app/shared/fonts/Rubik-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
-}
+}           
 
 @font-face {
     font-family: 'Rubik';
