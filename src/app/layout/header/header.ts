@@ -1,16 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { ThemeService } from '../../shared/service/theme';
-
+import { Component} from '@angular/core';
+import { Navbar } from '../../feature/navbar/navbar';
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [Navbar],
   templateUrl: './header.html',
 })
-export class Header {
-  private theme = inject(ThemeService);
-  isDark = this.theme.isDark;
-
-  toggleTheme() {
-    this.theme.toggle();
-  }
-} 
+export class Header {} 
