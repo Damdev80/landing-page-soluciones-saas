@@ -1,7 +1,7 @@
     <header class="w-full bg-secondary h-screen font-rubik relative overflow-hidden">
 
   <!-- Resplandor sutil detrás del título -->
-  <div class="absolute top-1/2 left-[25%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary-hover/[0.04] blur-[120px] pointer-events-none"></div>
+  <div class="absolute top-1/2 left-[25%] -translate-x-1/2 -translate-y-1/2 w-125 h-125 rounded-full bg-primary-hover/4 blur-[120px] pointer-events-none"></div>
 
   <!-- Nav -->
   <div class="w-full px-8 h-16 flex items-center justify-between">
@@ -22,6 +22,13 @@
       <a href="#" class="text-sm text-primary hover:text-primary-hover transition-colors duration-200"
         >Trabajos</a
       >
+      <button (click)="toggleTheme()" class="w-9 h-9 rounded-full ring-1 ring-(--card-ring) flex items-center justify-center text-primary-subtle hover:text-primary-hover transition-colors duration-200 cursor-pointer">
+        @if (isDark()) {
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
+        } @else {
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+        }
+      </button>
       <a
         href="#"
         class="text-sm bg-primary-hover text-secondary px-5 py-2 rounded-full hover:opacity-80 transition-opacity duration-200"
@@ -60,7 +67,7 @@
       <div class="relative w-full max-w-lg animate-[float_6s_ease-in-out_infinite]">
         
         <!-- Tarjeta principal -->
-        <div class="relative rounded-3xl bg-[#111118] p-10 ring-1 ring-white/10 animate-[orbit-glow_4s_ease-in-out_infinite]">
+        <div class="relative rounded-3xl bg-(--card-bg) p-10 ring-1 ring-(--card-ring) animate-[orbit-glow_4s_ease-in-out_infinite]">
 
             <!-- Glow pulsante detrás -->
             <div class="absolute -inset-2 -z-10 rounded-3xl bg-primary-hover/6 blur-2xl animate-[soft-pulse_5s_ease-in-out_infinite]"></div>
@@ -75,22 +82,22 @@
                 <span>Progreso del proyecto</span>
                 <span class="text-primary-hover">100%</span>
               </div>
-              <div class="h-2 w-full rounded-full bg-white/5 overflow-hidden">
+              <div class="h-2 w-full rounded-full bg-primary/5 overflow-hidden">
                 <div class="h-full rounded-full bg-linear-to-r from-primary-subtle to-primary-hover animate-[progress-fill_1s_ease-out_forwards]"></div>
               </div>
             </div>
 
             <!-- Métricas en fila -->
             <div class="grid grid-cols-3 gap-4 mb-8">
-              <div class="text-center p-3 rounded-2xl bg-white/5 ring-1 ring-white/5">
+              <div class="text-center p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
                 <p class="text-primary-hover text-2xl font-bold">120+</p>
                 <p class="text-primary-subtle text-[10px] uppercase tracking-wider mt-1">Proyectos</p>
               </div>
-              <div class="text-center p-3 rounded-2xl bg-white/5 ring-1 ring-white/5">
+              <div class="text-center p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
                 <p class="text-primary-hover text-2xl font-bold">98%</p>
                 <p class="text-primary-subtle text-[10px] uppercase tracking-wider mt-1">Satisfacción</p>
               </div>
-              <div class="text-center p-3 rounded-2xl bg-white/5 ring-1 ring-white/5">
+              <div class="text-center p-3 rounded-2xl bg-primary/5 ring-1 ring-(--card-ring)">
                 <p class="text-primary-hover text-2xl font-bold">30d</p>
                 <p class="text-primary-subtle text-[10px] uppercase tracking-wider mt-1">Entrega</p>
               </div>
@@ -98,16 +105,16 @@
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-2">
-              <span class="text-xs px-4 py-1.5 rounded-full bg-white/5 text-primary-subtle ring-1 ring-white/10">Estrategia</span>
-              <span class="text-xs px-4 py-1.5 rounded-full bg-white/5 text-primary-subtle ring-1 ring-white/10">Diseño</span>
-              <span class="text-xs px-4 py-1.5 rounded-full bg-white/5 text-primary-subtle ring-1 ring-white/10">Desarrollo</span>
-              <span class="text-xs px-4 py-1.5 rounded-full bg-white/5 text-primary-subtle ring-1 ring-white/10">Lanzamiento</span>
+              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Estrategia</span>
+              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Diseño</span>
+              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Desarrollo</span>
+              <span class="text-xs px-4 py-1.5 rounded-full bg-primary/5 text-primary-subtle ring-1 ring-(--card-ring)">Lanzamiento</span>
             </div>
 
         </div>
 
         <!-- Reflejo difuso debajo -->
-        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-10 rounded-full bg-primary-hover/[0.05] blur-2xl"></div>
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-10 rounded-full bg-primary-hover/5 blur-2xl"></div>
       </div>
     </div>
   </div>
